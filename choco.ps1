@@ -19,31 +19,30 @@ choco install sumatrapdf -y
 # choco install foxitreader -y
 
 ## sys
-choco install alacritty -y
-# choco install terminus -y
+# choco install alacritty -y
+choco install terminus -y
 choco install wsl -y
-choco install wsl-alpine -y
-# choco install wsl-archlinux -y
-# choco install openssh -y
-# choco install git curl -y
-# choco install nmap iperf3 -y
-# choco install autohotkey -y
+# choco install wsl-alpine -y
+choco install wsl-archlinux -y
+choco install openssh -y
+choco install git curl -y
+choco install nmap iperf3 -y
+choco install autohotkey -y
 choco install greenshot -y
 choco install speccy gpu-z -y
 
 ## fs
-# choco install rsync rclone 7zip -y
+choco install rsync rclone 7zip -y
 choco install wiztree -y
-# choco install tablacus -y
+choco install tablacus -y
 choco install etcher -y
 # choco install rufus -y
 
 ## neovim, notepad++
-choco install fvim neovim -y
+choco install neovim -y
 choco install fzf -y
 choco install ripgrep -y
 choco install fd -y
-choco install git -y
 choco install notepadplusplus -y
 
 ## sec
@@ -52,8 +51,8 @@ choco install keepassxc -y
 choco install pass-winmenu -y
 
 ## net
-choco install firefox ublockorigin-firefox -y
-# choco install googlechrome ublockorigin-chrome -y
+choco install firefox -y
+choco install googlechrome -y
 choco install tor-browser onionshare -y
 
 ## fonts
