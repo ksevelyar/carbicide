@@ -9,30 +9,37 @@ choco install boxstarter -y
 
 ## games
 choco install steam -y
+choco install mumble -y
 choco install nvidia-display-driver -y
+choco install logitechgaming -y
+choco install cheatengine -y
 
 ## books
 choco install sumatrapdf -y
-choco install foxitreader -y
+# choco install foxitreader -y
 
 ## sys
-choco install cygwin -y
-choco install openssh kitty -y
-choco install git curl -y
-choco install nmap telnet -y
-choco install autohotkey -y
+choco install alacritty -y
+# choco install terminus -y
+choco install wsl -y
+choco install wsl-alpine -y
+# choco install wsl-archlinux -y
+# choco install openssh -y
+# choco install git curl -y
+# choco install nmap iperf3 -y
+# choco install autohotkey -y
 choco install greenshot -y
 choco install speccy gpu-z -y
 
 ## fs
-choco install rclone 7zip -y
+# choco install rsync rclone 7zip -y
 choco install wiztree -y
-choco install tablacus -y
-choco install etcher rufus -y
+# choco install tablacus -y
+choco install etcher -y
+# choco install rufus -y
 
 ## neovim, notepad++
 choco install fvim neovim -y
-choco install cmder -y
 choco install fzf -y
 choco install ripgrep -y
 choco install fd -y
@@ -40,11 +47,13 @@ choco install git -y
 choco install notepadplusplus -y
 
 ## sec
-choco install keepassxc pass-winmenu -y
+choco install shutup10 -y
+choco install keepassxc -y
+choco install pass-winmenu -y
 
 ## net
-choco install firefox -y
-choco install googlechrome -y
+choco install firefox ublockorigin-firefox -y
+# choco install googlechrome ublockorigin-chrome -y
 choco install tor-browser onionshare -y
 
 ## fonts
@@ -53,13 +62,16 @@ choco install firacode -y
 
 ## media
 choco install spotify -y
+# choco install gmpdp -y
 choco install k-litecodecpackfull -y
 choco install vlc -y
 choco install kodi -y
+choco install nomacs -y
 choco install fsviewer -y
 
 ## im
-choco install telegram signal -y
+choco install telegram -y
+choco install signal -y
 
 # settings (mostly debloat)
 
@@ -189,7 +201,7 @@ $apps = @(
     "A278AB0D.DisneyMagicKingdoms"
     "A278AB0D.MarchofEmpires"
     "ActiproSoftwareLLC.562882FEEB491" # next one is for the Code Writer from Actipro Software LLC
-    "CAF9E577.Plex"  
+    "CAF9E577.Plex"
     "ClearChannelRadioDigital.iHeartRadio"
     "D52A8D61.FarmVille2CountryEscape"
     "D5EA27B7.Duolingo-LearnLanguagesforFree"
@@ -225,13 +237,13 @@ $apps = @(
 )
 
 foreach ($app in $apps) {
-    Write-Output "Trying to remove $app"
+  Write-Output "Trying to remove $app"
 
     Get-AppxPackage -Name $app -AllUsers | Remove-AppxPackage -AllUsers
 
     Get-AppXProvisionedPackage -Online |
-        Where-Object DisplayName -EQ $app |
-        Remove-AppxProvisionedPackage -Online
+    Where-Object DisplayName -EQ $app |
+    Remove-AppxProvisionedPackage -Online
 }
 
 Enable-WindowsOptionalFeature -Online -FeatureName "NFS-Administration" -All
@@ -239,4 +251,4 @@ Enable-WindowsOptionalFeature -Online -FeatureName "ClientForNFS-Infrastructure"
 # mount -o anon \\192.168.0.1\export S:
 
 # use UTC
-reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_QWORD /f 
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_QWORD /f
