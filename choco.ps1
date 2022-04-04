@@ -10,40 +10,22 @@ choco install boxstarter -y
 
 ## games
 choco install steam -y
-choco install mumble -y
 choco install nvidia-display-driver -y
 choco install logitechgaming -y
-choco install cheatengine -y
 
 ## books
 choco install sumatrapdf -y
-# choco install foxitreader -y
 
 ## sys
-# choco install alacritty -y
-choco install terminus -y
-choco install wsl -y
-# choco install wsl-alpine -y
-choco install wsl-archlinux -y
-choco install openssh -y
-choco install git curl -y
-choco install nmap iperf3 -y
 choco install autohotkey -y
 choco install greenshot -y
 choco install speccy gpu-z -y
 
 ## fs
-choco install rsync rclone 7zip -y
+choco install 7zip -y
 choco install wiztree -y
-choco install tablacus -y
-choco install etcher -y
-# choco install rufus -y
 
-## neovim, notepad++
-choco install neovim -y
-choco install fzf -y
-choco install ripgrep -y
-choco install fd -y
+## notepad++
 choco install notepadplusplus -y
 
 ## sec
@@ -62,7 +44,6 @@ choco install firacode -y
 
 ## media
 choco install spotify -y
-# choco install gmpdp -y
 choco install k-litecodecpackfull -y
 choco install vlc -y
 choco install kodi -y
@@ -71,10 +52,8 @@ choco install fsviewer -y
 
 ## im
 choco install telegram -y
-choco install signal -y
 
 # settings (mostly debloat)
-
 ## Explorer
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Set-TaskbarOptions -Size Large
